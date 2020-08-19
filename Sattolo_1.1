@@ -1,0 +1,17 @@
+import java.util.*;
+public class Sattolo {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter a string of input: ");
+        String input = s.nextLine();
+        ArrayList<String> a = new ArrayList<String>();
+        for(int i = 0; i < input.length(); i++) {
+          a.add(input.substring(i, i+1));
+        }
+        while(a.size() > 0) {
+          int index = (int)(Math.random() * a.size());
+          System.out.println(a.get(index));
+          a.remove(index);
+        }
+    }
+}
