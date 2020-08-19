@@ -1,0 +1,13 @@
+import java.util.*;
+public class Wget {
+    public static void main(String[] args) {
+        String s = args[0];
+        In i = new In(s);
+        String url = i.readAll();
+        
+        String file = s.substring(s.lastIndexOf('/') + 1);
+        Out out = new Out(file);
+        out.println(url);
+        out.close();
+    }
+}
